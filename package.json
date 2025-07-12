@@ -2,16 +2,20 @@
   "$schema": "https://www.raycast.com/schemas/extension.json",
   "name": "search-undraw",
   "title": "Undraw",
-  "description": "",
+  "description": "Search Undraw illustrations directly from Raycast.",
   "icon": "extension-icon.png",
   "author": "kazuyaumeki",
   "owner": "umekikazuya",
+  "categories": [
+    "Media",
+    "Design Tools"
+  ],
   "license": "MIT",
   "commands": [
     {
       "name": "search-undraw-illustrations",
       "title": "Search Undraw Illustrations",
-      "description": "",
+      "description": "Search Undraw illustrations directly from Raycast.",
       "mode": "view"
     }
   ],
