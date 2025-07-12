@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Grid, ActionPanel, Action } from "@raycast/api";
+import { Grid, ActionPanel, Action, showToast, Toast } from "@raycast/api";
 import { fetchUndrawMetadata, fetchAndStoreAllIllustrations, isDataFresh, getStoredIllustrations } from "./index";
 import type { Illustration } from "./index";
 
@@ -30,7 +30,11 @@ export default function Command() {
           console.log("Illustrations fetched and stored successfully.");
         }
       } catch (error) {
-        console.error("Error loading illustrations:", error);
+          await showToast({
+            style: Toast.Style.Failure,
+            title: "Failed to Load Illustrations",
+            message: error instanceof Error ? error.message : "An unknown error occurred.",
+          });
       } finally {
         setIsLoading(false);
       }
