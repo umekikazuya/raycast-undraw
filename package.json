@@ -5,6 +5,11 @@
   "description": "Search Undraw illustrations directly from Raycast.",
   "icon": "extension-icon.png",
   "author": "kazuyaumeki",
+  "owner": "umekikazuya",
+  "categories": [
+    "Media",
+    "Design Tools"
+  ],
   "license": "MIT",
   "commands": [
     {
