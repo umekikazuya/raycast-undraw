@@ -1,5 +1,3 @@
-// Dependency injection container for the application
-
 import { UndrawPageServiceImpl } from "../application/undraw-page-service";
 import { IllustrationServiceImpl } from "../application/illustration-service";
 import { RaycastLocalStorage } from "../infrastructure/raycast-local-storage";
@@ -44,21 +42,14 @@ export class ServiceContainer {
 
   static get pageService(): UndrawPageServiceImpl {
     if (!this._pageService) {
-      this._pageService = new UndrawPageServiceImpl(
-        this.httpClient,
-        this.pageParser,
-        this.metadataExtractor
-      );
+      this._pageService = new UndrawPageServiceImpl(this.httpClient, this.pageParser, this.metadataExtractor);
     }
     return this._pageService;
   }
 
   static get illustrationService(): IllustrationServiceImpl {
     if (!this._illustrationService) {
-      this._illustrationService = new IllustrationServiceImpl(
-        this.storageRepository,
-        this.httpClient
-      );
+      this._illustrationService = new IllustrationServiceImpl(this.storageRepository, this.httpClient);
     }
     return this._illustrationService;
   }
