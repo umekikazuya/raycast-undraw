@@ -30,11 +30,11 @@ export default function Command() {
           console.log("Illustrations fetched and stored successfully.");
         }
       } catch (error) {
-          await showToast({
-            style: Toast.Style.Failure,
-            title: "Failed to Load Illustrations",
-            message: error instanceof Error ? error.message : "An unknown error occurred.",
-          });
+        await showToast({
+          style: Toast.Style.Failure,
+          title: "Failed to Load Illustrations",
+          message: error instanceof Error ? error.message : "An unknown error occurred.",
+        });
       } finally {
         setIsLoading(false);
       }

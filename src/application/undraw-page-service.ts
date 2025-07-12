@@ -8,7 +8,7 @@ export class UndrawPageServiceImpl implements UndrawPageService {
   constructor(
     private readonly httpClient: HttpClient,
     private readonly pageParser: UndrawPageParser,
-    private readonly metadataExtractor: UndrawMetadataExtractor
+    private readonly metadataExtractor: UndrawMetadataExtractor,
   ) {}
 
   async fetchMetadata(): Promise<UndrawMetadata> {
@@ -17,9 +17,7 @@ export class UndrawPageServiceImpl implements UndrawPageService {
       const nextData = this.pageParser.extractNextData(html);
       return this.metadataExtractor.extractUndrawMetadata(nextData);
     } catch (error) {
-      throw new Error(
-        `Failed to fetch Undraw metadata: ${error instanceof Error ? error.message : String(error)}`
-      );
+      throw new Error(`Failed to fetch Undraw metadata: ${error instanceof Error ? error.message : String(error)}`);
     }
   }
 }

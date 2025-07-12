@@ -8,7 +8,7 @@ export class RaycastLocalStorage implements LocalStorageRepository {
 
   async getLastUpdated(): Promise<number | null> {
     const lastUpdatedString = await LocalStorage.getItem(RaycastLocalStorage.STORAGE_KEY_LAST_UPDATED);
-    
+
     if (!lastUpdatedString) {
       return null;
     }
@@ -29,7 +29,7 @@ export class RaycastLocalStorage implements LocalStorageRepository {
 
   async getIllustrations(): Promise<Illustration[] | null> {
     const illustrationsString = await LocalStorage.getItem(RaycastLocalStorage.STORAGE_KEY_ILLUSTRATIONS);
-    
+
     if (!illustrationsString) {
       await this.clearStorage();
       return null;
