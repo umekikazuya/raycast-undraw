@@ -15,11 +15,11 @@ A productivity tool for developers and designers, enabling instant search for hi
 ## Usage
 
 1.  Invoke Raycast, type `Search Undraw Illustrations`, and press Enter to run the command.
-    <!-- Insert screenshot here -->
+    ![Step 1](./metadata/usage-1.png)
 2.  As you type keywords into the search bar, relevant Undraw illustrations will appear instantly.
-    <!-- Insert screenshot here -->
+    ![Step 2](./metadata/usage-2.png)
 3.  Select the desired illustration and press `Enter`, or open the action panel with `⌘K`.
-    <!-- Insert screenshot here -->
+    ![Step 3](./metadata/usage-3.png)
 4.  Available Actions:
     * **Open in Undraw Website**: Opens the official Undraw website page for the selected illustration in your browser.
     * **Open SVG Image**: Opens the SVG image of the illustration directly in your browser.
